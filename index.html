@@ -168,6 +168,10 @@ footer a{color:#CFE3E6}
 
 /* barra fixa do celular (aparece depois do hero) */
 .sticky{display:none}
+.wa{position:fixed;right:20px;bottom:20px;z-index:11;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.28);transition:transform .15s,bottom .25s ease}
+.wa svg{width:32px;height:32px}
+.wa:hover{transform:scale(1.06)}
+.wa:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
 
 @media (max-width:960px){
   .hero .wrap,.how .wrap,.author .wrap,.offer-card{grid-template-columns:1fr}
@@ -213,6 +217,8 @@ footer a{color:#CFE3E6}
   .sticky div{line-height:1.2;font-size:13px;color:#A9C1C5}
   .sticky b{display:block;font-family:'Fraunces',serif;font-size:20px;color:#F7F4EE}
   .sticky .btn{min-height:48px;padding:0 22px;font-size:16px}
+  .wa{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:56px;height:56px}
+  .sticky.on ~ .wa{bottom:calc(84px + env(safe-area-inset-bottom))}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
@@ -235,7 +241,7 @@ footer a{color:#CFE3E6}
       <span class="pill">E-book · Manual OPSS 2026</span>
       <h1>Por onde começar a acreditação ONA? <em>O guia responde em 10 páginas.</em></h1>
       <p class="lead">O Manual OPSS 2026 em linguagem simples, <b>escrito por uma auditora ONA</b>, com os primeiros passos para a sua instituição.</p>
-      <div><a class="btn" data-checkout href="#oferta"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero o guia por R$ 49,96</a></div>
+      <div><a class="btn" data-checkout href="https://pay.hotmart.com/B108374951H"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero o guia por R$ 49,96</a></div>
       <p class="note">Pagamento único · PDF no seu e-mail · 7 dias de garantia</p>
     </div>
     <div class="visual">
@@ -358,7 +364,7 @@ footer a{color:#CFE3E6}
       <div class="offer-pay">
         <div class="price"><small>R$</small>49,96</div>
         <p>Guia completo em PDF, enviado para o e-mail informado na compra.</p>
-        <a class="btn" data-checkout href="#oferta"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero meu e-book</a>
+        <a class="btn" data-checkout href="https://pay.hotmart.com/B108374951H"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero meu e-book</a>
       </div>
     </div>
     <div class="guarantee">
@@ -396,7 +402,7 @@ footer a{color:#CFE3E6}
   <div class="wrap narrow stack center">
     <h2>Pronto para dar o <em>primeiro passo?</em></h2>
     <p class="lead">Baixe o guia, descubra onde a sua instituição está e comece a jornada com um plano.</p>
-    <a class="btn" data-checkout href="#oferta"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero meu e-book por R$ 49,96</a>
+    <a class="btn" data-checkout href="https://pay.hotmart.com/B108374951H"><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>Quero meu e-book por R$ 49,96</a>
   </div>
 </section>
 
@@ -415,12 +421,14 @@ footer a{color:#CFE3E6}
 
 <div class="sticky" aria-hidden="true">
   <div><b>R$ 49,96</b>ONA do Zero · PDF</div>
-  <a class="btn" data-checkout href="#oferta">Quero o guia</a>
+  <a class="btn" data-checkout href="https://pay.hotmart.com/B108374951H">Quero o guia</a>
 </div>
+
+<a class="wa" href="https://wa.me/556294188272?text=Ol%C3%A1!%20vim%20pelo%20site%20ONA%20do%20Zero" target="_blank" rel="noopener" aria-label="Falar com a Keila no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.71C5.8.71.7 5.8.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.29l5.7-1.5a11.33 11.33 0 0 0 5.74 1.47h.01c6.25 0 11.34-5.09 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></svg></a>
 
 <script>
 /* ===== COLE AQUI O LINK DO CHECKOUT (Hotmart, Kiwify, Mercado Pago...) ===== */
-const CHECKOUT = "";
+const CHECKOUT = "https://pay.hotmart.com/B108374951H";
 /* Enquanto estiver vazio, os botões levam para a seção da oferta. */
 
 if (CHECKOUT) document.querySelectorAll('[data-checkout]').forEach(a => { a.href = CHECKOUT; });
